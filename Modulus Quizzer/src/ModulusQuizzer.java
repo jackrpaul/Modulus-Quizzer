@@ -24,7 +24,7 @@ public class ModulusQuizzer
 			Scanner userInput = new Scanner(System.in);
 			for(int i = 0; i < userQuestions; i++)
 				{
-				int randomNumber = (int)(Math.random()*5 + 1);
+				int randomNumber = (int)(Math.random()*6 + 1);
 				switch (randomNumber)
 					{
 						case 1:
@@ -56,7 +56,7 @@ public class ModulusQuizzer
 					}
 				else
 					{
-					System.out.println("Incorrect!");
+					System.out.println("That is incorrect!");
 					}
 				}
 				
