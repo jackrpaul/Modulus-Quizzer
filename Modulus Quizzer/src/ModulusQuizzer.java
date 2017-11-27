@@ -12,8 +12,8 @@ public class ModulusQuizzer
 		private static void greetUser()
 			{
 			Scanner userInput = new Scanner(System.in);
-			System.out.println("Hello! I am the Modulus Quizzer, and I am now going to quiz you on modules.");
-			System.out.println("How many questions would you like to answer?");
+			System.out.println("Hello! I am the ULTRA Modulus Quizzer, and I am now going to quiz you on modules.");
+			System.out.println("How many questions would you like to answer, mortal?");
 			userQuestions = userInput.nextInt();
 			System.out.println("Okay, I will now think of " + userQuestions + " questions to ask you.");
 			}
@@ -24,27 +24,20 @@ public class ModulusQuizzer
 			Scanner userInput = new Scanner(System.in);
 			for(int i = 0; i < userQuestions; i++)
 				{
-				int randomNumber = (int)(Math.random()*6 + 1);
-				switch (randomNumber)
+				if (i == 1)
 					{
-						case 1:
-								{
-									firstNumber = (int)(Math.random()*50 + 1);
-									secondNumber = firstNumber;
-									break;
-								}
-						case 2:
-								{
-									firstNumber = (int)(Math.random()*5 + 1);
-									secondNumber = (int)(Math.random()*15 + 1);
-									break;
-								}
-						default:
-								{
-									firstNumber = (int)(Math.random()*25 + 15);
-									secondNumber = (int)(Math.random()*15 + 1);
-									break;
-								}
+						firstNumber = (int)(Math.random()*50 + 1);
+						secondNumber = firstNumber;
+					}
+				else if (i == 2)
+					{
+						firstNumber = (int)(Math.random()*5 + 1);
+						secondNumber = (int)(Math.random()*15 + 1);
+					}
+				else
+					{
+						firstNumber = (int)(Math.random()*25 + 10);
+						secondNumber = (int)(Math.random()*15 + 1);
 					}
 				questionAnswer = firstNumber % secondNumber;
 				System.out.println(firstNumber + "%" + secondNumber + " is?");
@@ -68,7 +61,7 @@ public class ModulusQuizzer
 			System.out.println("You got " + correctAnswer + " out of " + userQuestions + " correct.");
 			if (correctAnswer == userQuestions)
 				{
-				System.out.println("Way to ace the quiz!");
+				System.out.println("YOU ARE A MASTER");
 				}
 			}
 
